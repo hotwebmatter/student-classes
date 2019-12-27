@@ -6,5 +6,12 @@ namespace student_classes
 {
     class Student
     {
+        // properties
+        private int studentNumber;
+        private string firstName,
+                       lastName,
+                       classification,
+                       major;
+
     }
 }
