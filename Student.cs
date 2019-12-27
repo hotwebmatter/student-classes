@@ -69,7 +69,7 @@ namespace student_classes
             }
         }
         // constructors (at least two, per spec)
-        Student()
+        public Student()
         {
             studentNumber = GenerateNumber();
             firstName = "Example";
@@ -77,7 +77,7 @@ namespace student_classes
             classification = "Freshman";
             major = "Computer Science";
         }
-        Student(string first, string last)
+        public Student(string first, string last)
         {
             studentNumber = GenerateNumber();
             firstName = first;
@@ -91,6 +91,11 @@ namespace student_classes
         {
             Random r = new Random();
             return r.Next(1000, 9999);
+        }
+        // concatenate first and last name
+        public string GetFullName()
+        {
+            return String.Format("{0} {1}", firstName, lastName);
         }
     }
 }
