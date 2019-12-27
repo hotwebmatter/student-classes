@@ -7,7 +7,8 @@ namespace student_classes
     {
         static void Main(string[] args)
         {
-            WriteLine("Hello World!");
+            Student myStudent = new Student("Matthew", "Obert");
+            WriteLine(myStudent.GetFullName());
         }
     }
 }
