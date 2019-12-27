@@ -68,5 +68,29 @@ namespace student_classes
                 return major;
             }
         }
+        // constructors (at least two, per spec)
+        Student()
+        {
+            studentNumber = GenerateNumber();
+            firstName = "Example";
+            lastName = "Student";
+            classification = "Freshman";
+            major = "Computer Science";
+        }
+        Student(string first, string last)
+        {
+            studentNumber = GenerateNumber();
+            firstName = first;
+            lastName = last;
+            classification = "Freshman";
+            major = "Computer Science";
+
+        }
+        // generate student number
+        public static int GenerateNumber()
+        {
+            Random r = new Random();
+            return r.Next(1000, 9999);
+        }
     }
 }
